@@ -6,11 +6,11 @@ public class Snack
     private int id;
     private String name;
     private int quantity;
-    double int cost;
+    private double int cost;
     private int vendingMachineId;
 
 
-    public Snack(int id, String name, int quantity,double cost,int vendingMachineId)
+    public Snack(String name, int quantity,double cost,int vendingMachineId)
     {
         maxId++
         this.id = maxId;
