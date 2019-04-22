@@ -9,14 +9,23 @@ public class VendingMachine
 
     public VendingMachine(String name)
     {
-        maxId++
+        maxId++;
         this.id = maxId;
         this.name = name;
+        
         
 
     }
 
-    public getId()
+   public static void vend(Customer customer,Snack snack, int quantity)
+   {
+       customer.buySnack(quantity*snack.getCost());
+       snack.setQuantity(snack.getQuantity() - quantity);
+       System.out.println(customer.getName() + " coh " + customer.getCashTotal());
+       System.out.println("New quantity " +snack.getName()+" "+ snack.getQuantity());
+   }
+
+    public int getId()
     {
     return id;
     }
@@ -26,7 +35,7 @@ public class VendingMachine
         this.id = id;
     }
 
-    public getName()
+    public String getName()
     {
         return name;
     }

@@ -1,16 +1,16 @@
-ackage snackbar;
+package snackbar;
 
 public class Customer
 {
     private static int maxId = 0;
     private int id;
     private String name;
-    private double int coh;
+    private double coh;
 
 
     public Customer( String name, double coh)
     {
-        maxId++
+        maxId++;
         this.id = maxId;
         this.name = name;
         this.coh = coh;
@@ -23,7 +23,7 @@ public class Customer
         this.coh = this.coh + cashAmount;
     }
 
-    public  getCashTotal()
+    public  double getCashTotal()
     {
         return this.coh;
     }
@@ -33,7 +33,7 @@ public class Customer
         this.coh = this.coh - cashAmount;
     }
 
-    public getName()
+    public String getName()
     {
         return name;
     }

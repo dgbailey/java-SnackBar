@@ -20,13 +20,21 @@ public class Main
         Snack Water = new Snack("Water",20,2.75,Drink.getId());
 
 
-        //Customer 1 buys 3 of snack 4. Print Customer 1 Cash on hand. Print quantity of snack 4.
-        Jane.buySnack(3*Soda.getCost());
-        Soda.setQuantity(Soda.getQuantity() - 3);
+        Food.vend(Jane,Soda,3);
+        Food.vend(Jane,Pretzel,1);
+        Food.vend(Bob,Soda,4);
+        Jane.addCash(10);
         System.out.println(Jane.getCashTotal());
-        System.out.println(Soda.getQuantity());
+        Food.vend(Bob,ChocolateBar,1);
+        Pretzel.addQuantity(12);
+        System.out.println(Pretzel.getQuantity());
+        Food.vend(Bob,Pretzel,3);
 
-        Customer 1 buys 1 of snack 3. Print Customer 1 Cash on hand. Print quantity of snack 3.
+
+
+        
+
+        
 
     }
 
@@ -34,7 +42,7 @@ public class Main
     {
         workWithData();
 
-        // System.out.println(h1);
+    
     }
 
 }
